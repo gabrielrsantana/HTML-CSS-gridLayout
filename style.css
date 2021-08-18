@@ -1,0 +1,180 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+aside{
+   /* background: green; */
+   background-color: rgb(228, 222, 222);
+   box-shadow: 0 8px 15px -2px rgb(199, 217, 219);
+   grid-area: a; /*area do aside */
+   justify-content: center;
+   align-items: center;
+   height: fit-content;
+   position:relative;
+}
+aside img{
+  height: 80%;
+  width: 50%
+}
+aside p{
+  position: relative;
+  border-left: 5px;
+  right:70px;
+  top:0px;
+ }
+aside section{
+  /* usando flexbox*/
+  margin-right: auto;
+  margin-left: auto;
+  margin-top:10px;
+  display: flex;/* mudando aqui ele fica embaixo */
+
+}
+
+.container {
+  display: grid;
+  grid-template: 20vh 70vh 10vh/3fr 1fr; /*3fr tamanho da coluna */
+  grid-template-areas:
+    "h h"
+    "m a"
+    "m a"
+    "m a"
+    "f f";
+}
+
+
+footer {
+  display:flex;
+  font-weight: 600;
+  background: rgb(139, 139, 139);
+  box-shadow: 0 -20px 10px -15px rgb(199, 217, 219); /*sombra so no topo do footer */
+   grid-area: f;
+   height:70px;
+   color: lavenderblush;
+   /* text-align: center; */
+   justify-content: center; /* so usa com flexbox This property determines the alignment of the elements in a horizontal manner.*/
+   align-items: center; /* Align items is used to align items vertically inside a flex container. But this only works if there is a fixed height.*/
+   z-index: 20;   
+}
+header {
+  /* transparencia 1= total transparencia  0=sem transparencia*/
+  /* background-image: linear-gradient(to right, rgba(248, 248, 248, 0), rgba(135, 190, 207, 0.623)); */
+  position: fixed; /*3333333333333333333333333 */
+  top:0;
+  width: 100%;
+  grid-area: h;
+   background-color: rgb(212, 219, 230); 
+  box-shadow: 0 8px 15px -2px rgb(199, 217, 219);
+ z-index: 20;
+}
+header img{
+  position: relative; 
+  left:50px;
+  top:1px;
+  height: 19vh;
+  width: 25vw;
+}
+/* aside*/
+.lateral{
+  align-items: center;
+  justify-content:first baseline;
+  margin: 10px;
+}
+#lateral-img2-p{
+    position: relative;
+    top:1px;
+    left:-44px;
+}
+.lateral h3{
+  position: relative;
+  top:-85px;
+  left:10px;
+  color: rgb(101, 188, 223);
+}
+main {
+  background: rgb(230, 230, 235);
+  box-shadow: 15px 0px 10px -15px rgb(199, 217, 219);
+  height: 100%;
+  grid-area: m;
+  z-index: 15;
+  
+}
+main h1{
+  margin-left: 50px;
+  margin-bottom: 25px;
+}
+main h2{
+  padding-left: 15px;
+  font-family: fantasy;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgb(199, 216, 228);
+
+}
+/* alinhando os articles dentro do section*/
+.main-lancamentos{
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.main-lancamentos article{
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+.main-lancamentos article:hover{
+  z-index: 20;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px 5px rgb(48, 213, 224);
+   
+
+}
+main section{
+  display: flex;
+}
+
+/*menu aqui */
+ul {
+  position: fixed;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(88, 138, 233,0.7);
+  border-radius: 5px;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+  font-size: 30px;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover{
+  background-color: rgb(228, 225, 66);
+  border-radius: 5px;
+}
+
+
+nav{
+  position: absolute;
+  top:130px;
+  left:650px;
+}
